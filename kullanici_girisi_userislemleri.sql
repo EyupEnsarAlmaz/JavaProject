@@ -16,30 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `bgt_bilgiler`
+-- Table structure for table `userislemleri`
 --
 
-DROP TABLE IF EXISTS `bgt_bilgiler`;
+DROP TABLE IF EXISTS `userislemleri`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `bgt_bilgiler` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `AdSoyad` varchar(50) DEFAULT NULL,
-  `Email` varchar(100) DEFAULT NULL,
-  `KullaniciAdi` varchar(50) DEFAULT NULL,
-  `Sifre` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `userislemleri` (
+  `barkodid` int NOT NULL,
+  `urunad` varchar(45) DEFAULT NULL,
+  `stokadet` int DEFAULT NULL,
+  `fiyat` int DEFAULT NULL,
+  `kategori` varchar(45) DEFAULT NULL,
+  `aciklama` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`barkodid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `bgt_bilgiler`
+-- Dumping data for table `userislemleri`
 --
 
-LOCK TABLES `bgt_bilgiler` WRITE;
-/*!40000 ALTER TABLE `bgt_bilgiler` DISABLE KEYS */;
-INSERT INTO `bgt_bilgiler` VALUES (1,'Eyup Ensar','eyup@gmail.com','eyup123','1234'),(2,'eyup','asd','asdec','asde'),(3,'eyup2','almaz','xenon','123'),(4,'asd','','sad',''),(5,'asd','','',''),(6,'as','','',''),(7,'asd','asdsad','asdasd','asdad'),(8,'','','',''),(9,'','','',''),(10,'','','',''),(11,'','','',''),(12,'','','',''),(13,'','','',''),(14,'asda','asdasd','asdas','asdasd'),(15,'','','',''),(16,'','','',''),(17,'','','',''),(18,'','','',''),(19,'emir','asd','bağdatlı','ebc'),(20,'fatih','asasd','asd','asdasd'),(21,'SADASD','ASDASD','ASDASD','ASDASD'),(22,'eyup','eyup','eyup','eyup'),(23,'','','','');
-/*!40000 ALTER TABLE `bgt_bilgiler` ENABLE KEYS */;
+LOCK TABLES `userislemleri` WRITE;
+/*!40000 ALTER TABLE `userislemleri` DISABLE KEYS */;
+INSERT INTO `userislemleri` VALUES (1,'eyup',213,12,'AS','ASD'),(2,'ASAS',12,12,'ASDAS','ADSA'),(3,'ASAS',12,233,'ASAD','ADSD');
+/*!40000 ALTER TABLE `userislemleri` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

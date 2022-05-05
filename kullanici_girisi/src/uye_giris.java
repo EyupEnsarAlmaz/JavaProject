@@ -48,10 +48,10 @@ public class uye_giris extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txt_ad = new javax.swing.JTextField();
-        txt_sifre = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        txt_sifre = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,8 +85,8 @@ public class uye_giris extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_sifre, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                            .addComponent(txt_ad)))
+                            .addComponent(txt_ad, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                            .addComponent(txt_sifre)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(jLabel3)))
@@ -138,6 +138,9 @@ public class uye_giris extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Giriş Başarılı");
                     txt_ad.setText("");
                     txt_sifre.setText("");
+                    stokekrani stokekrani = new stokekrani();
+                    stokekrani.setVisible(true);
+                    setVisible(false);
                 }else{
                    JOptionPane.showMessageDialog(null, "Değerleri Kontrol ediniz"); 
                 }
@@ -190,6 +193,6 @@ public class uye_giris extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txt_ad;
-    private javax.swing.JTextField txt_sifre;
+    private javax.swing.JPasswordField txt_sifre;
     // End of variables declaration//GEN-END:variables
 }
